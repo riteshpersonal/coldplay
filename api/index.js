@@ -4,8 +4,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-const MONGO_URI = "mongodb+srv://coldplay:coldplay6969@coldplay.zlm9c.mongodb.net/?retryWrites=true&w=majority"
- // Use environment variable for MongoDB connection
+const MONGO_URI = process.env.MONGO_URI; // Use environment variable for MongoDB connection
 const PORT = process.env.PORT || 3000;
 
 // Connect to MongoDB
